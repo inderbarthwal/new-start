@@ -27,7 +27,7 @@ def uploads():
             basepath, 'LR', secure_filename(f.filename))
         f.save(file_path)
 
-        x = predict()
+        x = test1()
 
         return render_template("base.html", name = x + ".png")
     return None
