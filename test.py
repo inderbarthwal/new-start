@@ -30,10 +30,6 @@ def test1():
         output = (output * 255.0).round()
         cv2.imwrite('Static/{:s}.png'.format(base), output)
 
-        dir = 'LR'
-        for f in os.listdir(dir):
-            os.remove(os.path.join(dir, f))
-
         fileName = base
     return fileName
 
