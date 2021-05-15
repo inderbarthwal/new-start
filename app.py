@@ -12,11 +12,11 @@ from test import predict, test1
 app = Flask(__name__)
 
 
-@app.route('/',methods=['GET'])
+@app.route('/')
 def home():
     return render_template('index.html')
 
-@app.route('/Upload',methods=['GET','POST'])
+@app.route('/Upload',methods=['POST'])
 def uploads():
     if request.method == 'POST':
 
@@ -29,7 +29,7 @@ def uploads():
 
         x = test1()
 
-        return render_template("base.html", name = x + ".png")
+        return render_template("base.html", name = x)
     return None
 
 
